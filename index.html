@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Book Store</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+		</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</head>
+	<body ng-app="bookStore" ng-controller="BookListController">
+		<div ng-repeat="book in books">
+			<p>{{book.name}}</p>
+			<br>
+			<p>{{book.author}}</p>
+			<br>
+			<p>{{book.price}}</p>
+			<button ng-click="buyBook(book)">Buy</button>	
+		</div>
+	</body>
+</html>
